@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porfolio Anh Quoc</title>
+     <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <!-- CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+   
+    
 </head>
 <body>
     
         <div class="container">
+            <!-- particles -->
+            <div id="particles-js"></div>
             <header>
                 <div class="logo"><div class="icon-circle"><i class="fa-solid fa-frog "></i></div>Anh Quoc</div>
                 <nav class="navigation">
@@ -25,7 +33,12 @@
                 <div >
                     <!-- window .: tim icon -->
                      <!-- cdn: lay ve bang duong link -->
-                    <button class="button"><span>Contact</span> <i style="color: white;" class="fa-solid fa-handshake"></i></button>
+                    <button class="button"><span>Contact</span> 
+                        <i style="color: white;" class="fa-solid fa-handshake">
+
+                        </i></button>
+                        <!-- xuất khi tới 900px -->
+                    <div class="bars"><i class="fa-solid fa-bars"></i></div>
                 </div>
             </header>
 
@@ -88,7 +101,9 @@
 
         
         </div>
-
+        <!-- particles -->
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script src="app.js"></script>
        
 </body>
 </html>

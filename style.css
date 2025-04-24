@@ -4,12 +4,23 @@
     margin: 0;
     box-sizing: border-box;
 }
+#particles-js{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+
 /* ------------------------------------------------header-------------------------------------------------------------------- */
+
 .container{
    max-width: 1200px;
    margin: 0px auto;
    padding: 20px;
 }
+
 body{
     min-height: 100vh;
     color: white;
@@ -17,6 +28,11 @@ body{
     /* background: radial-gradient(circle,rgb(38, 44, 75) 0%, rgb(100, 39, 51) 100%); */
   
     background: linear-gradient(to right, #2f173b, #98255f);
+    position: relative;
+    z-index: 2;
+    /* font */
+    font-family: "Winky Rough", sans-serif;
+
 
 }
 header{
@@ -64,6 +80,11 @@ ul a{
     padding-bottom: 5px;
 
 }
+/* thay đổi màu chữ khi lia chuột vào */
+ul a:hover{
+    color: #e6338d;
+   
+}
 ul a::after {
     content: "";
     position: absolute;
@@ -105,7 +126,16 @@ ul a:hover::after{
     cursor: pointer;
     transition: all 0.3s ease;
     overflow: hidden;
+   
+    
 
+}
+/* sreen iphone */
+.bars{
+    display: none;
+    font-size: 30px;
+    color: #FF69B4;
+    cursor: pointer;
 }
 /* ------------------------------------------------main-------------------------------------------------------------------- */
 main{
@@ -172,7 +202,9 @@ box-shadow: 0px 8px 10px  rgb(200, 182, 226);
 .design_tool{
     display: flex;
     gap: 20px;
+   
 }
+
 .design{
     background: linear-gradient(to right, #9932CC, #FF69B4);
     box-sizing: border-box;
@@ -237,19 +269,41 @@ box-shadow: 0px 8px 10px  rgb(200, 182, 226);
    display: flex;
    align-items: center;
    justify-content: center;
+   /* xoay tròn */
+   transition: transform 0.9s ease;
    
    
 }
-
+.circle:hover {
+    animation: rotateOnce 0.9s ease;
+  }
+  
+  @keyframes rotateOnce {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 /* --------------------------------------------------------end---------------------------------------------------------- */
 .line{
     
-    width: 324px;
+    /* width: 324px;
     margin-inline-start: 420px;
     margin-bottom: 20px ; 
     margin-top: 20px;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: hidden; */
+   
+    width: 40%; 
+  margin-inline: auto;
+  border: 1px solid white;
+  margin-bottom: 20px ; 
+    margin-top: 50px;
 }
 .setting{
     display: flex;
@@ -265,11 +319,11 @@ box-shadow: 0px 8px 10px  rgb(200, 182, 226);
     .icon-circle{
         border: 3px solid  rgb(200, 182, 226); ;
         border-radius: 50%;
-   width: 50px;
-   height: 50px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
    
@@ -278,4 +332,40 @@ box-shadow: 0px 8px 10px  rgb(200, 182, 226);
 .end{
     display: flex;
     justify-content: center;
+    margin-bottom: 20px; 
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 900px ){
+   .container header nav, .container header .button{
+    display: none;
+    
+   }
+   .bars{
+    display: block;
+   }
+   main{
+   flex-wrap: wrap-reverse;
+   justify-content: center;
+   align-items: center;
+   gap: 40px;
+
+   }
+   .content{
+   justify-content: center;
+   align-items: center;
+   }
+}
+@media only screen and (max-width: 500px ){
+    .image_container .img{
+    width: 300px;
+    height: fit-content;
+    }
+    .image_container:hover{
+        width: 300px;
+    }
+    .content h1{
+        font-size: 50px;
+        white-space: nowrap;
+    }
 }
