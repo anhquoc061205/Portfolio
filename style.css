@@ -310,10 +310,12 @@ box-shadow: 0px 8px 10px  rgb(200, 182, 226);
     gap: 30px;
     font-size: 30px;
     justify-content: center;
+    align-items: center;
     .icon-circle:hover{
         transform: translateY(-5px);
         transition: all 0.3s;
         cursor: pointer;
+        background-color: #e6338d
       
     }
     .icon-circle{
@@ -357,7 +359,7 @@ box-shadow: 0px 8px 10px  rgb(200, 182, 226);
    }
 }
 @media only screen and (max-width: 500px ){
-    .image_container .img{
+    .image_container img{
     width: 300px;
     height: fit-content;
     }
@@ -367,5 +369,23 @@ box-shadow: 0px 8px 10px  rgb(200, 182, 226);
     .content h1{
         font-size: 50px;
         white-space: nowrap;
+    }
+    .button_content{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       .design_tool{
+       display: flex;
+       flex-direction: column;
+       }
+    }
+    .line{
+        width: 100%;
+       
+    }
+    .setting{
+        font-size: 20px;
+      
     }
 }
